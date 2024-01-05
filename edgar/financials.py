@@ -29,11 +29,15 @@ gaap_facts = {'AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEq
               'GrossProfit': 'Gross Profit',
               'Liabilities': 'Total Liabilities',
               'LiabilitiesCurrent': 'Current Liabilities',
+              'LiabilitiesNoncurrent': 'Non-Current Liabilities',
+              'LongTermDebtNoncurrent': 'Long-term Dept',
+              'OtherLiabilitiesNoncurrent': 'Other Non-Current Liabilities',
               'RetainedEarningsAccumulatedDeficit': 'AccumulatedDeficit',
               'StockholdersEquity': 'Stockholders Equity',
               'StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest': 'Stockholders Equity',
               'LiabilitiesAndStockholdersEquity': 'Liabilities & Equity',
               'RevenueFromContractWithCustomerExcludingAssessedTax': 'Total Revenue',
+              'Revenues': 'Revenues',
               'PropertyPlantAndEquipmentNet': 'Property, Plant & Equipment',
               'OperatingLeaseRightOfUseAsset': 'Operating Lease Right of Use Asset',
               'OperatingExpenses': 'Operating Expenses',
@@ -140,6 +144,8 @@ class BalanceSheet(FinancialTable):
         "LiabilitiesCurrent",
         "LiabilitiesNoncurrent",
         "Liabilities",
+        "LongTermDebtNoncurrent",
+        "OtherLiabilitiesNoncurrent",
         "StockholdersEquity",
         "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
         "LiabilitiesAndStockholdersEquity"
@@ -309,6 +315,7 @@ class CashflowStatement(FinancialTable):
 class IncomeStatement(FinancialTable):
     INCOME_STATEMENT_FACTS = [
         'RevenueFromContractWithCustomerExcludingAssessedTax',
+        'Revenues',
         'CostOfGoodsAndServicesSold',
         'GrossProfit',
         'OperatingExpenses',
